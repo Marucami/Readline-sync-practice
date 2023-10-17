@@ -3,7 +3,7 @@ const reverseStringWithException = () => {
     const str = readlineSync.question('Напишите предложение ');
     const exception = readlineSync.question('Напишите слово-исключение ');
     const strAttr = str.split(" ");
-    for (let i = 0; i < strAttr.length; i--) {
+    for (let i = 0; i < strAttr.length; i++) {
         if (strAttr[i] === exception) {
         continue;
         } else {
@@ -11,7 +11,7 @@ const reverseStringWithException = () => {
         }
         }
         let reversedStr = strAttr.join(" ");
-return reversedStr;
+return reversedStr.split(' ').reverse().join(' ');
 }
 console.log(reverseStringWithException());
 
